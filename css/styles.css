@@ -6,13 +6,14 @@
 .container{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 60px 1fr 1fr 1fr 1fr 60px;
+    grid-template-rows: 60px 250px 1fr 1fr 1fr 60px;
     grid-template-areas: "header"
                          "mensajePrincipal"
                          "proyectos"
                          "tecnologias"
-                         "acercaDe"
+                         "contacto"
                          "footer";
+    font-family: 'Roboto', sans-serif;
 }
 
 .header{
@@ -27,15 +28,16 @@
     border-top: 1px solid white;
 }
 
-.header h2{
-    margin-left: 100px;
+.header_title{
+    text-transform: uppercase;
+    margin-left: 20px;
 }
 
 .header_menu ul{
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    margin-right: 100px;
+    margin-right: 20px;
 }
 
 .header_menu ul li{
@@ -49,6 +51,9 @@
 
 .mensajePrincipal{
     grid-area: mensajePrincipal;
+    font-size: 30px;
+    background-color: gray;
+    border-bottom: 1px solid black;
 }
 
 .mensajePrincipal h1{
@@ -64,10 +69,82 @@
     grid-area: tecnologias;
 }
 
-.acercaDe{
-    grid-area: acercaDe;
+.contacto{
+    grid-area: contacto;
+    padding: 40px 80px 40px 80px;
+    background-color: rgb(22, 138, 247);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contacto_formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contacto_formulario label{
+    color: white;
+    font-size: 30px;
+    padding-bottom: 10px;
+    font: bold;
+}
+
+.contacto_formulario input{
+    height: 40px;
+    width: 380px;
+    border-radius: 5px;
+    border: none;
+}
+
+.contacto_formulario button{
+    height: 30px;
+    width: 180px;
+    margin-top: 10px;
+    text-align: center;
+    border-style: none;
+    background: transparent;
+    border-radius: 5px;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+}
+
+.contacto_formulario button:hover{
+    color: black;
+    background-color: white;
+}
+
+.contacto_imagenes img{
+    width: 60px;
+    height: 60px;
+    padding: 30px 30px 0px 30px;
+}
+
+.contacto_imagenes img:hover{
+    -webkit-transform:scale(1.25);
+    -moz-transform:scale(1.25);
+    -ms-transform:scale(1.25);
+    -o-transform:scale(1.25);
+    transform:scale(1.25);
 }
 
 .footer{
     grid-area: footer;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+
+.footer_mensaje{
+    margin-left: 20px;
+}
+
+.footer_diseño{
+    margin-right: 20px;
 }

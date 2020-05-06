@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Google Font ROBOTO-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <!--Enlace al archivo de los estilos-->
     <link rel="stylesheet" href="./css/styles.css">
     <title>Mi Portafolio WEB</title>
@@ -10,17 +12,17 @@
 <body>
     <div class="container">
         <header class="header">
-            <h2 class="header_title">Jesús Vélez Flores</h2>
+            <h2 class="header_title">Jesus Velez</h2>
             <nav class="header_menu">
                 <ul>
                     <li><a href="#project">Proyectos</a></li>
                     <li><a href="#technology">Tecnologias</a></li>
-                    <li><a href="#aboutMe">Acerca De</a></li>
+                    <li><a href="#aboutMe">Contacto</a></li>
                 </ul>
             </nav>
         </header>
         <section class="mensajePrincipal">
-            <h1>Hola! Soy Jesús Vélez <br> Ing. En Sistemas <br> Apasionado por la Tecnología</h1>
+            <h1>Hola! Soy Jesús Vélez <br> Ingeniero en Sistemas <br> Apasionado por la Tecnología</h1>
         </section>
         <section id="project" class="proyectos">
             <p>proyectos realizados</p>
@@ -28,11 +30,22 @@
         <section id="technology" class="tecnologias">
             <p>Seccion de las tecnologias que conozco</p>
         </section>
-        <section id="aboutMe" class="acercaDe">
-            <p>Seccion de acerca de</p>
+        <section id="aboutMe" class="contacto">
+            <form class="contacto_formulario">
+                <label for="#">¿QUIERES CONOCERME?</label>
+                <input type="text" placeholder="Déjame tu email">
+                <button>Enviar</button>
+            </form>
+            <figure class="contacto_imagenes">
+                <a href="https://www.linkedin.com/in/velez-flores/" target="_blank"><img src="./img/linkedin.png" alt="logo-linkedin"></a>
+                <a href="https://github.com/Velez27" target="_blank"><img src="./img/github.png" alt="logo-github"></a>
+                <a href="https://www.instagram.com/velez.flores/" target="_blank"><img src="./img/instagram.png" alt="logo-instagram"></a>
+                <a href="#" target="_blank"><img src="./img/cv.png" alt="logo-cv"></a>
+            </figure>
         </section>
         <footer class="footer">
-            <p>Este es el footer</p>
+            <h4 class="footer_mensaje">Mi Espacio en la WEB para Mostrar mis Proyectos</h4>
+            <h4 class="footer_diseño">Desing By Jesús Vélez</h4>
         </footer>
     </div>
 </body>
