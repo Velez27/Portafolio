@@ -6,11 +6,11 @@
 .container{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 60px 250px 1fr 1fr 1fr 60px;
+    grid-template-rows: 60px 300px 1fr 1fr 220px 60px;
     grid-template-areas: "header"
                          "mensajePrincipal"
                          "proyectos"
-                         "tecnologias"
+                         "habilidades"
                          "contacto"
                          "footer";
     font-family: 'Roboto', sans-serif;
@@ -23,7 +23,7 @@
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
-    background-color: black;
+    background-color: #3f4c6b;
     color: white;
     border-top: 1px solid white;
 }
@@ -41,7 +41,18 @@
 }
 
 .header_menu ul li{
-    margin: 10px 10px 10px 10px;
+    margin: 10px 35px;
+    font-size: 25px;
+    letter-spacing: 4px;
+}
+
+.header_menu ul li:hover{
+    transition: 0.3s;
+    -webkit-transform:scale(1.25);
+    -moz-transform:scale(1.25);
+    -ms-transform:scale(1.25);
+    -o-transform:scale(1.25);
+    transform:scale(1.25);
 }
 
 .header_menu ul li a{
@@ -51,9 +62,16 @@
 
 .mensajePrincipal{
     grid-area: mensajePrincipal;
+    display: flex;
+    justify-content: space-between;
+    color: white;
     font-size: 30px;
-    background-color: gray;
+    background-color: #606c88;
     border-bottom: 1px solid black;
+}
+
+.mensajePrincipal strong{
+    color: black;
 }
 
 .mensajePrincipal h1{
@@ -61,18 +79,27 @@
     padding-bottom: 20px;
 }
 
+.mensajePrincipal_imagen {
+    justify-self: flex-end;
+}
+
+.mensajePrincipal_imagen img{
+    width: 600px;
+    height: 299px;
+}
+
 .proyectos{
     grid-area: proyectos;
 }
 
-.tecnologias{
-    grid-area: tecnologias;
+.habilidades{
+    grid-area: habilidades;
 }
 
 .contacto{
     grid-area: contacto;
     padding: 40px 80px 40px 80px;
-    background-color: rgb(22, 138, 247);
+    background-color: #38ada9;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -81,7 +108,6 @@
 .contacto_formulario{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
 }
 
 .contacto_formulario label{
@@ -89,6 +115,14 @@
     font-size: 30px;
     padding-bottom: 10px;
     font: bold;
+    letter-spacing: 2px;
+}
+
+.contacto_formulario img{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin: 52px 0px 0px 10px;
 }
 
 .contacto_formulario input{
@@ -96,7 +130,10 @@
     width: 380px;
     border-radius: 5px;
     border: none;
+    font-size: 25px;
+    text-indent: 45px;
 }
+
 
 .contacto_formulario button{
     height: 30px;
@@ -112,6 +149,7 @@
 }
 
 .contacto_formulario button:hover{
+    transition: 0.3s;
     color: black;
     background-color: white;
 }
@@ -123,6 +161,7 @@
 }
 
 .contacto_imagenes img:hover{
+    transition: 0.3s;
     -webkit-transform:scale(1.25);
     -moz-transform:scale(1.25);
     -ms-transform:scale(1.25);
@@ -132,7 +171,7 @@
 
 .footer{
     grid-area: footer;
-    background-color: black;
+    background-color: #3f4c6b;
     color: white;
     display: flex;
     flex-direction: row;
