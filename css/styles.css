@@ -94,6 +94,49 @@
 
 .habilidades{
     grid-area: habilidades;
+    padding: 5px;
+    padding-top: 40px;
+    background-color: #96A9D4;
+    display: grid;
+    grid-template-rows: repeat(8, 45px);
+    grid-template-areas: "bloque1"
+                         "bloque2"
+                         "bloque3"
+                         "bloque4"
+                         "bloque5"
+                         "bloque6"
+                         "bloque7"
+                         "bloque8";
+    gap: 10px;
+    justify-items: center;
+}
+
+.bloque1,
+.bloque3,
+.bloque5,
+.bloque7{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.bloque2,
+.bloque4,
+.bloque6,
+.bloque8{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.habilidades section div{
+    width: fit-content;
+    height: fit-content;
+    background-color: #38ada9;
+    padding: 8px;
+    border: 1px solid #38ada9;
+    border-radius: 5px;
+    color: white;
 }
 
 .contacto{
