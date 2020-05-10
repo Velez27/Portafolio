@@ -124,7 +124,31 @@
 
 .habilidades{
     grid-area: habilidades;
+    color: white;
     background-color: #96A9D4;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    justify-items: center;
+    padding: 10px;
+    gap: 5px;
+}
+
+.habilidades_title{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 40px;
+    
+}
+
+.habilidades div{
+    background-color: #38ada9;
+    align-self: center;
+    padding: 8px;
+    border-radius: 4px;
+
 }
 
 .contacto{
