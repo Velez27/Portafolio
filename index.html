@@ -12,23 +12,34 @@
 <body>
     <div class="container">
         <header class="header">
-            <h2 class="header_title">Jesus Velez</h2>
-            <nav class="header_menu">
-                <ul>
-                    <li><a href="#project">Proyectos</a></li>
-                    <li><a href="#skills">Habilidades</a></li>
-                    <li><a href="#aboutMe">Contacto</a></li>
-                </ul>
-            </nav>
+            <div class="header_logo">
+                <h2 class="header_logo-tittle">Jesus Velez</h2>
+            </div>
+            <div class="header_menu">
+                <nav class="header_menu-items">
+                    <ul>
+                        <li><a href="#project">Proyectos</a></li>
+                        <li><a href="#skills">Habilidades</a></li>
+                        <li><a href="#aboutMe">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
-        <section class="mensajePrincipal">
-            <h1>Hola! Soy <strong>Jesús Vélez</strong> <br> Ingeniero en <strong>Sistemas</strong> <br> Apasionado por la <strong>Tecnología</strong></h1>
-            <figure class="mensajePrincipal_imagen">
-                <img src="./img/web-development.jpg" alt="imagenPrincipal">
+        <section class="mensaje">
+            <div class="mensaje_presentacion">
+                <h1>Hola! Soy <strong>Jesús Vélez</strong> <br> Ingeniero en <strong>Sistemas</strong> <br> Apasionado por la <strong>Tecnología</strong></h1>
+            </div>
+            <figure class="mensaje_imagen">
+                    <img src="./img/web-development.jpg" alt="imagenPrincipal">
             </figure>
         </section>
         <section id="project" class="proyectos">
-            <p>proyectos realizados</p>
+            <div class="proyectos_columna1">
+                <p>Proyectos 1</p>
+            </div>
+            <div class="proyectos_columna2">
+                <p>Proyectos 2</p>
+            </div>
         </section>
         <section id="skills" class="habilidades">
             <section class="bloque1">
@@ -73,13 +84,15 @@
             </section>
         </section>
         <section id="aboutMe" class="contacto">
-            <form class="contacto_formulario">
-                <label for="#">¿CREAMOS ALGO JUNTOS?</label>
-                <img src="./img/icono-email.png" alt="icono-email">
-                <input type="text" placeholder="Déjame tu email">
-                <button>Enviar</button>
-            </form>
-            <figure class="contacto_imagenes">
+            <div class="contacto_formulario">
+                <form class="contacto_formulario-form">
+                    <label for="#">¿CREAMOS ALGO JUNTOS?</label>
+                    <img src="./img/icono-email.png" alt="icono-email">
+                    <input type="text" placeholder="Déjame tu email">
+                    <button>Enviar</button>
+                </form>
+            </div>
+            <figure class="contacto_enlaces">
                 <a href="https://www.linkedin.com/in/velez-flores/" target="_blank"><img src="./img/linkedin.png" alt="logo-linkedin"></a>
                 <a href="https://github.com/Velez27" target="_blank"><img src="./img/github.png" alt="logo-github"></a>
                 <a href="https://www.instagram.com/velez.flores/" target="_blank"><img src="./img/instagram.png" alt="logo-instagram"></a>
@@ -88,7 +101,7 @@
         </section>
         <footer class="footer">
             <h4 class="footer_mensaje">Mi Espacio en la WEB para Mostrar mis Proyectos</h4>
-            <h4 class="footer_diseño">Desing By Jesús Vélez</h4>
+            <h4 class="footer_by">Desing By Jesús Vélez</h4>
         </footer>
     </div>
 </body>

@@ -6,9 +6,9 @@
 .container{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 60px 300px 1fr 1fr 220px 60px;
+    grid-template-rows: 60px 300px 1fr 1fr 200px 60px;
     grid-template-areas: "header"
-                         "mensajePrincipal"
+                         "mensaje"
                          "proyectos"
                          "habilidades"
                          "contacto"
@@ -19,34 +19,43 @@
 .header{
     grid-area: header;
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
     background-color: #3f4c6b;
     color: white;
     border-top: 1px solid white;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "logo menu";
 }
 
-.header_title{
+.header_logo{
+    grid-area: logo;
+}
+
+.header_logo-tittle{
     text-transform: uppercase;
     margin-left: 20px;
 }
 
-.header_menu ul{
+.header_menu{
+    grid-area: menu;
+    justify-self: center;
+    align-self: end;
+}
+
+.header_menu-items ul{
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    margin-right: 20px;
 }
 
-.header_menu ul li{
+.header_menu-items ul li{
     margin: 10px 35px;
     font-size: 25px;
     letter-spacing: 4px;
 }
 
-.header_menu ul li:hover{
+.header_menu-items ul li:hover{
     transition: 0.3s;
     -webkit-transform:scale(1.25);
     -moz-transform:scale(1.25);
@@ -55,105 +64,91 @@
     transform:scale(1.25);
 }
 
-.header_menu ul li a{
+.header_menu-items ul li a{
     text-decoration: none;
     color: white;
 }
 
-.mensajePrincipal{
-    grid-area: mensajePrincipal;
-    display: flex;
-    justify-content: space-between;
+.mensaje {
+    grid-area: mensaje;
     color: white;
     font-size: 30px;
     background-color: #606c88;
     border-bottom: 1px solid black;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "presentacion imagen";
 }
 
-.mensajePrincipal strong{
-    color: black;
+.mensaje_presentacion{
+    grid-area: presentacion;
 }
 
-.mensajePrincipal h1{
+.mensaje_presentacion h1{
     margin: 40px 20px 0px 40px;
     padding-bottom: 20px;
 }
 
-.mensajePrincipal_imagen {
-    justify-self: flex-end;
+.mensaje_presentacion strong{
+    color: black;
 }
 
-.mensajePrincipal_imagen img{
+.mensaje_imagen{
+    grid-area: imagen;
+    justify-self: end;
+    height: inherit;
+}
+
+.mensaje_imagen img{
     width: 600px;
     height: 299px;
 }
 
 .proyectos{
     grid-area: proyectos;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "proyectos1 proyectos2";
+    justify-items: center;
+}
+
+.proyectos_columna1{
+    grid-area: proyectos1;
+}
+
+.proyectos_columna2{
+    grid-area: proyectos2;
 }
 
 .habilidades{
     grid-area: habilidades;
-    padding: 5px;
-    padding-top: 40px;
     background-color: #96A9D4;
-    display: grid;
-    grid-template-rows: repeat(8, 45px);
-    grid-template-areas: "bloque1"
-                         "bloque2"
-                         "bloque3"
-                         "bloque4"
-                         "bloque5"
-                         "bloque6"
-                         "bloque7"
-                         "bloque8";
-    gap: 10px;
-    justify-items: center;
-}
-
-.bloque1,
-.bloque3,
-.bloque5,
-.bloque7{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-}
-
-.bloque2,
-.bloque4,
-.bloque6,
-.bloque8{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-}
-
-.habilidades section div{
-    width: fit-content;
-    height: fit-content;
-    background-color: #38ada9;
-    padding: 8px;
-    border: 1px solid #38ada9;
-    border-radius: 5px;
-    color: white;
 }
 
 .contacto{
     grid-area: contacto;
-    padding: 40px 80px 40px 80px;
+    padding: 40px 80px;
     background-color: #38ada9;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "formulario enlaces";
+    
 }
 
 .contacto_formulario{
-    display: flex;
-    flex-direction: column;
+    grid-area: formulario;
+    justify-self: start;
+    align-self: center;
 }
 
-.contacto_formulario label{
+.contacto_formulario-form{
+    display: inline-grid;
+}
+
+.contacto_formulario-form label{
     color: white;
     font-size: 30px;
     padding-bottom: 10px;
@@ -161,14 +156,14 @@
     letter-spacing: 2px;
 }
 
-.contacto_formulario img{
+.contacto_formulario-form img{
     position: absolute;
     width: 30px;
     height: 30px;
     margin: 52px 0px 0px 10px;
 }
 
-.contacto_formulario input{
+.contacto_formulario-form input{
     height: 40px;
     width: 380px;
     border-radius: 5px;
@@ -177,8 +172,7 @@
     text-indent: 45px;
 }
 
-
-.contacto_formulario button{
+.contacto_formulario-form button{
     height: 30px;
     width: 180px;
     margin-top: 10px;
@@ -191,19 +185,25 @@
     cursor: pointer;
 }
 
-.contacto_formulario button:hover{
+.contacto_formulario-form button:hover{
     transition: 0.3s;
     color: black;
     background-color: white;
 }
 
-.contacto_imagenes img{
-    width: 60px;
-    height: 60px;
-    padding: 30px 30px 0px 30px;
+.contacto_enlaces{
+    grid-area: enlaces;
+    justify-self: end;
+    align-self: center;
 }
 
-.contacto_imagenes img:hover{
+.contacto_enlaces img{
+    width: 60px;
+    height: 60px;
+    padding: 0 30px;
+}
+
+.contacto_enlaces img:hover{
     transition: 0.3s;
     -webkit-transform:scale(1.25);
     -moz-transform:scale(1.25);
@@ -216,17 +216,18 @@
     grid-area: footer;
     background-color: #3f4c6b;
     color: white;
+    letter-spacing: 2px;
+    border-bottom: 1px solid white;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid white;
+    justify-content: space-between;
 }
 
 .footer_mensaje{
     margin-left: 20px;
 }
 
-.footer_diseño{
+.footer_by{
     margin-right: 20px;
 }
