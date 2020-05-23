@@ -11,7 +11,7 @@ html, body{
 .container{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 60px 300px 1fr 400px 200px 60px;
+    grid-template-rows: 60px 300px 1fr 420px 200px 60px;
     grid-template-areas: "header"
                          "mensaje"
                          "proyectos"
@@ -24,8 +24,8 @@ html, body{
 .header{
     grid-area: header;
     width: 100%;
-    background-color: #3f4c6b;
-    color: white;
+    background-color: #2A3133;
+    color: #fff;
     border-top: 1px solid white;
     display: grid;
     grid-template-columns: 40% 60%;
@@ -35,11 +35,19 @@ html, body{
 
 .header_logo{
     grid-area: logo;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    align-items: center;
+    margin-left: 3%;
+}
+
+.header_logo-image img{
+    width: 45px;
 }
 
 .header_logo-title{
-    text-transform: uppercase;
-    margin-left: 20px;
+    margin-left: 4%;
+    letter-spacing: 2px;
 }
 
 .header_menu{
@@ -50,13 +58,14 @@ html, body{
 .header_menu-items ul{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     list-style-type: none;
 }
 
 .header_menu-items ul li{
     font-size: 25px;
     letter-spacing: 4px;
+    font-weight: 700;
 }
 
 .header_menu-items ul li:hover{
@@ -76,8 +85,7 @@ html, body{
 .mensaje{
     grid-area: mensaje;
     color: white;
-    font-size: 30px;
-    background-color: #606c88;
+    background-color: #2d3436;
     border-bottom: 1px solid black;
     display: grid;
     grid-template-columns: 50% 50%;
@@ -87,15 +95,23 @@ html, body{
 
 .mensaje_presentacion{
     grid-area: presentacion;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    align-self: center;
+    font-size: 25px;
+    transition: 1s;
 }
 
-.mensaje_presentacion h1{
-    margin: 40px 20px 0px 40px;
-    padding-bottom: 20px;
+.mensaje_presentacion:hover{
+    transition: 1s;
+    transform: scale(1.5);
 }
 
 .mensaje_presentacion strong{
-    color: black;
+    color: #0984e3;
 }
 
 .mensaje_imagen{
@@ -105,23 +121,25 @@ html, body{
 }
 
 .mensaje_imagen img{
-    width: 600px;
+    width: 100%;
     height: 299px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 .proyectos{
     grid-area: proyectos;
-    background-color: #96A9D4;
+    background-color: #f0f3f5;
     display: grid;
     grid-template-columns: 1fr;
 }
 
 .proyectos_title{
-    padding-top: 5px;
+    margin: 30px 30px 30px 60px;
     text-transform: uppercase;
-    letter-spacing: 10px;
-    font-size: 40px;
-    text-align: center;
+    letter-spacing: 5px;
+    font-size: 32px;
+    color: #0984e3;
 }
 
 .proyectos_tarjetas{
@@ -130,10 +148,11 @@ html, body{
     grid-template-rows: 350px;
     gap: 0 10px;
     justify-items: center;
-    margin: 30px 30px 0 30px;
+    margin: 0 30px 30px 30px;
     padding: 20px;
-    border: 1px solid black;
+    box-shadow: 2px 2px 10px 1px grey;
     border-radius: 5px;
+    background-color: white;
 }
 
 .proyectos_tarjetas img{
@@ -142,12 +161,8 @@ html, body{
     border-radius: 40px;
 }
 
-.proyectos_texto{
-    color: white;
-}
-
 .proyectos_texto-titulo{
-    font-size: 30px;
+    font-size: 28px;
     padding-bottom: 5px;
 }
 
@@ -158,53 +173,83 @@ html, body{
     padding-bottom: 5px;
 }
 
+.proyectos_texto-tecnologias,
+.proyectos_texto-fecha,
+.proyectos_texto-url a{
+    font-style: oblique;
+    color: #636e72;
+    font-weight: 500;
+}
+
+.proyectos_texto-url a{
+    text-decoration: none;
+    transition: .5s;
+}
+
+.proyectos_texto-url a:hover{
+    transition: 0.3s;
+    color: #0984e3;
+}
+
+.proyectos_texto strong{
+    color: black;
+}
+
 .proyectos_texto-descripcion{
     padding-top: 10px;
     width: 95%;
     font-size: 20px;
-    font: bold;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    line-height: 140%;
 }
 
 .habilidades{
     grid-area: habilidades;
     color: white;
-    background-color: #96A9D4;
+    background-color: #f0f3f5;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(7, 50px);
+    grid-template-rows: 70px repeat(6, 50px);
     justify-items: center;
     padding: 10px;
     gap: 5px;
 }
 
 .habilidades_title{
+    justify-self: start;
+    margin-left: 60px;
+    color: #0984e3;
+    font-size: 32px;
     grid-column-start: 1;
     grid-column-end: 5;
     text-transform: uppercase;
     letter-spacing: 10px;
-    font-size: 40px;
 }
 
 .habilidades div{
-    background-color: #38ada9;
-    align-self: center;
+    height: max-content;
+    background-color: #0984e3;
     padding: 8px;
-    border-radius: 4px;
+    border-radius: 4px;;
+}
+
+.habilidades p {
+    text-align: center;
 }
 
 .contacto{
     grid-area: contacto;
-    padding: 40px 80px;
-    background-color: #38ada9;
+    background-color: #0984e3;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 1fr;
     grid-template-areas: "formulario enlaces";
+    justify-items: center;
 }
 
 .contacto_formulario{
     grid-area: formulario;
-    justify-self: start;
     align-self: center;
 }
 
@@ -234,6 +279,7 @@ html, body{
     border: none;
     font-size: 25px;
     text-indent: 45px;
+    outline-style: none;
 }
 
 .contacto_formulario-form button{
@@ -257,7 +303,6 @@ html, body{
 
 .contacto_enlaces{
     grid-area: enlaces;
-    justify-self: end;
     align-self: center;
 }
 
@@ -265,6 +310,7 @@ html, body{
     width: 60px;
     height: 60px;
     padding: 0 30px;
+    transition: 0.2s;
 }
 
 .contacto_enlaces img:hover{
@@ -278,7 +324,7 @@ html, body{
 
 .footer{
     grid-area: footer;
-    background-color: #3f4c6b;
+    background-color: #2A3133;
     color: white;
     letter-spacing: 2px;
     border-bottom: 1px solid white;
