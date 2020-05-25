@@ -354,9 +354,9 @@ html, body{
         width: 30px;
     }
     .header_logo-title{
-        margin-left: 16%;
+        margin-left: 18%;
         letter-spacing: 2px;
-        font-size: 10px;
+        font-size: 8px;
     }
     .header_menu-items ul li{
         font-size: 10px;
@@ -425,6 +425,88 @@ html, body{
         margin-left: 10px;
         justify-self: start;
     }
+}
 
-    
+@media screen and (max-width: 380px){
+    .container{
+        grid-template-rows: 60px 200px 1fr 420px 240px 60px;
+    }
+    .header{
+        grid-template-columns: 30% 70%;
+    }
+    .header_logo-image img{
+        width: 30px;
+    }
+    .header_logo-title{
+        margin-left: 18%;
+        letter-spacing: 2px;
+        font-size: 8px;
+    }
+    .header_menu-items ul li{
+        font-size: 12px;
+    }
+
+    .mensaje{
+        grid-template-columns: 100%;
+        grid-template-areas: "presentacion";
+    }
+    .mensaje_presentacion{
+        font-size: 20px;
+    }
+    .mensaje_presentacion:hover{
+        transition: none;
+        transform: none;
+    }
+    .mensaje_imagen{
+        display: none;
+    }
+
+    .proyectos_title{
+        margin: 30px;
+        text-align: center;
+    }
+    .proyectos_tarjetas{
+        grid-template-columns: 100%;
+    }
+    .proyectos_tarjetas img{
+        border-radius: 10px;
+    }
+    .proyectos_texto-descripcion{
+        text-align: justify;
+        padding-bottom: 12px;
+    }
+
+    .habilidades_title{
+        margin-left: 0;
+        justify-self: center;
+    }
+
+    .contacto{
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "formulario"
+                             "enlaces";
+        justify-items: center;
+    }
+    .contacto_formulario-form{
+        justify-items: center;
+    }
+    .contacto_formulario-form img{
+        margin: 52px 0 0 24px;
+    }
+    .contacto_enlaces img{
+        width: 48px;
+        height: 48px;
+    }
+
+    .footer{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+    .footer_mensaje,
+    .footer_by{
+        font-size: 14px;
+        margin-left: 10px;
+        justify-self: start;
+    }
 }
