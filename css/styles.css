@@ -167,14 +167,12 @@ html, body{
     padding-bottom: 5px;
 }
 
-.proyectos_texto-tecnologias,
 .proyectos_texto-fecha,
 .proyectos_texto-url{
     font-size: 18px;
     padding-bottom: 5px;
 }
 
-.proyectos_texto-tecnologias,
 .proyectos_texto-fecha,
 .proyectos_texto-url a{
     font-style: oblique;
