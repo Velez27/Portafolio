@@ -11,11 +11,10 @@ html, body{
 .container{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 60px 300px 1fr 420px 200px 60px;
+    grid-template-rows: 60px 300px 1fr 200px 60px;
     grid-template-areas: "header"
                          "mensaje"
                          "proyectos"
-                         "habilidades"
                          "contacto"
                          "footer";
     font-family: 'Roboto', sans-serif;
@@ -204,7 +203,7 @@ html, body{
     line-height: 140%;
 }
 
-.habilidades{
+/* .habilidades{
     grid-area: habilidades;
     color: white;
     background-color: #f0f3f5;
@@ -236,7 +235,7 @@ html, body{
 
 .habilidades p {
     text-align: center;
-}
+} */
 
 .contacto{
     grid-area: contacto;
@@ -387,10 +386,10 @@ html, body{
         padding-bottom: 12px;
     }
 
-    .habilidades_title{
+    /* .habilidades_title{
         margin-left: 0;
         justify-self: center;
-    }
+    } */
 
      .contacto{
          grid-template-columns: 60% 40%;
@@ -453,10 +452,10 @@ html, body{
         padding-bottom: 12px;
     }
 
-    .habilidades_title{
+    /* .habilidades_title{
         margin-left: 0;
         justify-self: center;
-    }
+    } */
 
     .contacto{
         grid-template-columns: 100%;
@@ -537,10 +536,10 @@ html, body{
         padding-bottom: 12px;
     }
 
-    .habilidades_title{
+    /* .habilidades_title{
         margin-left: 0;
         justify-self: center;
-    }
+    } */
 
     .contacto{
         grid-template-columns: 100%;
