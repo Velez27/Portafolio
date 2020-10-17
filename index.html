@@ -1,106 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--FAVICON-->
-    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-    <!--Google Font ROBOTO-->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <!--Enlace al archivo de los estilos-->
+    <title>Mi Portafolio Web</title>
     <link rel="stylesheet" href="./css/styles.css">
-    <title>Mi Portafolio WEB</title>
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="header_logo">
-                <div class="header_logo-image">
-                    <img tabindex="0" src="./img/logo-rubik.png" alt="logo-rubik">
-                </div>
-                <div class="header_logo-title">
-                    <h2 tabindex="0">Jesús Vélez</h2>
-                </div>
-            </div>
-            <div class="header_menu">
-                <nav class="header_menu-items">
-                    <ul>
-                        <li><a href="#project">Proyectos</a></li>
-                        <li><a href="#aboutMe">Contacto</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        <section class="mensaje">
-            <div class="mensaje_presentacion">
-                <h2 tabindex="0">¡Hola! Soy <strong>Jesús Vélez</strong> <br>
-                    Ingeniero en <strong>Sistemas</strong> <br>
-                </h2>
-            </div>
-            <div class="mensaje_imagen">
-                <img src="./img/web-development.jpg" alt="imagenPrincipal">
-            </div>
-        </section>
-        <section id="project" class="proyectos">
-            <h3 class="proyectos_title">Mis Proyectos</h3>
-            <div class="proyectos_tarjetas">
-                <div class="proyectos_texto">
-                    <h3 class="proyectos_texto-titulo">Aplicación Web - Rick And Morty</h3>
-                    <p class="proyectos_texto-tecnologias">JavaScript/HTML/CSS/GIT</p>
-                    <p class="proyectos_texto-fecha"><strong>Fecha: </strong>10-05-2020</p>
-                    <p class="proyectos_texto-url"><strong>Puedes verlo en: </strong><a target="_blank" href="https://github.com/Velez27/personajesRickAndMorty">GitHub.com</a></p>
-                    <p class="proyectos_texto-descripcion">Aplicación Web, que permite visualizar información de los personajes de la serie animada Rick and Morty. Utilice HTML para la estructura y CSS para dar estilos y los colores a la aplicación. Al desarrollar esta aplicación aprendí a consumir recursos de una API con JavaScript.</p>
-                </div>
-                <figure class="proyectos_imagen">
-                    <img src="./img/proyecto-rickandmorty.png" alt="imagen-proyecto">
-                </figure>
-            </div>
-            <div class="proyectos_tarjetas">
-                <div class="proyectos_texto">
-                    <h3 class="proyectos_texto-titulo">Sistema Reportes - CRUD</h3>
-                    <p class="proyectos_texto-tecnologias">Java/Mysql Workbench/NetBeans/GIT</p>
-                    <p class="proyectos_texto-fecha"><strong>Fecha: </strong>06/04/2020</p>
-                    <p class="proyectos_texto-url"><strong>Puedes verlo en: </strong><a target="_blank" href="https://github.com/Velez27/sistemaReportes">GitHub.com</a></p>
-                    <p class="proyectos_texto-descripcion">Aplicación de consola, que permite guardar reportes de técnicos e información sobre algunos usuarios. Al desarrollar esta aplicación aprendí a conectar una base de datos MySQL con Java mediante un controlador. Con MySQL Workbench diseñe la base de datos y mediante SQL realice las consultas básicas para Listar, Eliminar, Actualizar e Insertar datos.</p>
-                </div>
-                <figure class="proyectos_imagen">
-                    <img src="./img/proyecto-sistemareportes.png" alt="imagen-proyecto">
-                </figure>
-            </div>
-            <div class="proyectos_tarjetas">
-                <div class="proyectos_texto">
-                    <h3 class="proyectos_texto-titulo">Portafolio - Pagina Web</h3>
-                    <p class="proyectos_texto-tecnologias">HTML/CSS/GIT</p>
-                    <p class="proyectos_texto-fecha"><strong>Fecha: </strong>27/05/2020</p>
-                    <p class="proyectos_texto-url"><strong>Puedes verlo en: </strong><a target="_blank" href="https://github.com/Velez27/Portafolio">GitHub.com</a></p>
-                    <p class="proyectos_texto-descripcion">En el desarrollo de este proyecto aprendí a estructurar las secciones de la pagina web con HTML y a dar estilos con CSS, utilicé CSS GRID y FLEXBOX para posicionar los elementos y hacer responsiva la página web.</p>
-                </div>
-                <figure class="proyectos_imagen">
-                    <img src="./img/proyecto-paginaweb.png" alt="imagen-proyecto">
-                </figure>
-            </div>
-        </section>
-        <section id="aboutMe" class="contacto">
-            <div class="contacto_formulario">
-                <form class="contacto_formulario-form">
-                    <label for="#">¿CREAMOS ALGO JUNTOS?</label>
-                    <img src="./img/icono-email.png" alt="icono-email">
-                    <input type="text" placeholder="Déjame tu email">
-                    <button><a href="mailto:jvf_velez@hotmail.com">Enviar</a></button>
-                </form>
-            </div>
-            <figure class="contacto_enlaces">
-                <a title="LinkedIn.com" href="https://www.linkedin.com/in/velez-flores/" target="_blank"><img src="./img/linkedin.png" alt="logo-linkedin"></a>
-                <a title="GitHub.com" href="https://github.com/Velez27" target="_blank"><img src="./img/github.png" alt="logo-github"></a>
-                <a title="Instagram.com" href="https://www.instagram.com/velez.flores/" target="_blank"><img src="./img/instagram.png" alt="logo-instagram"></a>
-                <a title="Mi CV" href="https://drive.google.com/file/d/1atbtkdFX3M-TSFxVSEaz8Usitb814cDV/view" target="_blank"><img src="./img/cv.png" alt="logo-cv"></a>
-            </figure>
-        </section>
-        <footer class="footer">
-            <h4 class="footer_mensaje">Mi Espacio en la WEB para Mostrar mis Proyectos</h4>
-            <h4 class="footer_by">Desing By Jesús Vélez</h4>
-        </footer>
-    </div>
     <script src="./js/app.js"></script>
 </body>
 </html>
